@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href={{url_for('static' , filename = 'css/normalize.css')}}>
+        <link rel="stylesheet" href={{url_for('static' , filename = 'css/grid.css')}}>
+        <link rel='stylesheet' href={{url_for('static' , filename = 'css/styleSucc.css')}}>
+
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap" rel="stylesheet" type='text/css'>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <title>Results Page</title>
+
+        <style type="text/css">
+            th{
+                text-align: center;
+                font-size: 20px;
+            }
+
+            td{
+                text-align: center;
+                font-size: 18px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class = "second-main" style = "height: 100% , width : 100%;">
+
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Lija Alex</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{{url_for('home')}}">Home</a>
+              </li>
+
+            </ul>
+
+          </div>
+        </div>
+      </nav>
+
+      <br>
+      <br>
+
+            <div class = "header">
+          <h3 style = "text-align: center;color: white"><span class="header-content-text">Uploaded Image</span></h3>
+<br>
+
+                <row style = "width: 100% ; display: flex; justify-content: center;">
+                    <img class = "result-img" src={{url_for('static', filename = 'images/'+ img)}}>
+                </row>
+            </div>
+
+            <div class = "info">
+
+              <h3 style = "text-align: center;color: white; font-size: 2.5rem;"><span class="header-content-text">Predictions</span></h3>
+
+
+
+                <row style = "width: 100%; display: flex; justify-content: center;">
+                    <table class="table-bordered text-light table-custom">
+                        <tr>
+                            <th>Rank</th>
+                            <th>Class</th>
+                            <th>Probability</th>
+                        </tr>
+                        <tr>
+                            <td>1st</td>
+                            <td>{{ predictions.class1 }}</td>
+                            <td>{{ predictions.prob1 }} %</td>
+                          </tr>
+                          <tr>
+                            <td>2nd</td>
+                            <td>{{ predictions.class2 }}</td>
+                            <td>{{ predictions.prob2 }} %</td>
+                        </tr>
+                        <tr>
+                            <td>3rd</td>
+                            <td>{{ predictions.class3 }}</td>
+                            <td>{{ predictions.prob3 }} %</td>
+                          </tr>
+                    </table>
+                </row>
+            </div>
+        </div>
+
+        <div class="bottom-container">
+        <a class="footer-link" href="https://www.linkedin.com/in/lijaalex123/">LinkedIn</a>
+        <a class="footer-link" href="https://twitter.com/alex_lija">Twitter</a>
+        <a class="footer-link" href="https://github.com/LijaAlex12">Github</a>
+
+
+        <p class="copyright">Made with ❤️ Lija Alex</p>
+      </div>
+    </body>
+</html>
