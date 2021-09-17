@@ -48,5 +48,11 @@ pip install pillow
 ```
   * Check for the result at:
     - http://127.0.0.1:5000/
-    
+   
+ ## output screens - Flask app
+ ![first screen](https://github.com/LijaAlex12/Lija-AI-Final-Project/blob/main/bootcamp_screenshot1.png)
+ 
+ 
+ ![second screen](https://github.com/LijaAlex12/Lija-AI-Final-Project/blob/main/bootcamp_screenshot2.png)
+ 
  
